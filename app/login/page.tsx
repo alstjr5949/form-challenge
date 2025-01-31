@@ -18,21 +18,21 @@ export default function Login() {
         <FormInput
           type="email"
           placeholder="이메일"
-          errors={[]}
+          errors={state?.errors?.email ?? []}
           required
           name="email"
         />
         <FormInput
           type="text"
           placeholder="아이디"
-          errors={[]}
+          errors={state?.errors?.id ?? []}
           required
           name="id"
         />
         <FormInput
           type="password"
           placeholder="비밀번호"
-          errors={state?.errors ?? []}
+          errors={state?.errors?.password ?? []}
           required
           name="password"
         />
