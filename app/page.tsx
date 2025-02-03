@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { test } from "./lib/db";
 
+test();
 export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen px-10">
