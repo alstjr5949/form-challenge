@@ -11,7 +11,7 @@ export default function FormButton({ text }: FormButtonProps) {
 
   return (
     <button
-      className="w-full p-2 bg-lime-300 rounded-lg hover:bg-lime-400 transition-colors text-black font-bold mt-2"
+      className="w-full p-3 bg-teal-400 rounded-lg hover:bg-teal-300 transition-colors text-white font-bold"
       disabled={pending}
     >
       {pending ? "로딩중..." : text}

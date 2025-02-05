@@ -9,7 +9,5 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const { email, id, password } = await req.json();
 
-  console.log("logged in!!");
-
   return NextResponse.json({ email, id, password });
 }

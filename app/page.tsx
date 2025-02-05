@@ -1,16 +1,39 @@
+import FormButton from "@/components/form-button";
+import FormInput from "@/components/form-input";
 import Link from "next/link";
-import { test } from "./lib/db";
 
-test();
-export default function Home() {
+export default function Login() {
   return (
-    <div className="flex justify-center items-center h-screen px-10">
-      <Link
-        href="/login"
-        className="w-full py-3 bg-blue-500 rounded-md flex justify-center items-center hover:bg-blue-600 transition-colors"
-      >
-        로그인 하러가기
-      </Link>
+    <div className="flex flex-col justify-center items-center gap-6 h-full">
+      <div className="flex flex-col items-center gap-2">
+        <p className="text-3xl font-bold">작업하다 막힐 땐,</p>
+        <p className="text-3xl font-bold">언제든 애스킷!</p>
+      </div>
+      <form action="" className="flex flex-col gap-3 w-full mt-10">
+        <FormInput
+          type="text"
+          placeholder="아이디를 입력해주세요"
+          errors={[]}
+          required
+          name="id"
+        />
+        <FormInput
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+          errors={[]}
+          required
+          name="password"
+        />
+        <FormButton text="로그인" />
+      </form>
+      <div className="flex justify-around items-center w-full gap-2">
+        <Link href="/create-account" className="text-sm text-neutral-500">
+          이메일로 회원가입
+        </Link>
+        <Link href="/find-account" className="text-sm text-neutral-500">
+          아이디/비밀번호 찾기
+        </Link>
+      </div>
     </div>
   );
 }

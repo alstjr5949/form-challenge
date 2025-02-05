@@ -19,7 +19,7 @@ export default function FormInput({
         type={type}
         name={name}
         placeholder={placeholder}
-        className="w-full p-2 rounded-lg bg-transparent border border-gray-500 focus:outline-offset-4 focus:outline-neutral-500 placeholder:text-neutral-400"
+        className="w-full p-3 rounded-lg bg-transparent border border-neutral-300 focus:outline-none placeholder:text-neutral-300"
         required={required}
       />
       {errors.map((error, index) => (
