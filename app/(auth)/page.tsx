@@ -3,7 +3,7 @@
 import FormButton from "@/components/form-button";
 import FormInput from "@/components/form-input";
 import Link from "next/link";
-import { login } from "./action";
+import { login } from "../action";
 import { useActionState } from "react";
 
 export default function Login() {

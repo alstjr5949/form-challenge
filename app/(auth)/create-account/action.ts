@@ -1,15 +1,15 @@
 "use server";
 
 import { z } from "zod";
-import db from "../lib/db";
+import db from "../../lib/db";
 import bcrypt from "bcrypt";
 import {
   PASSWORD_MIN_LENGTH,
   PASSWORD_REGEX,
   PASSWORD_REGEX_ERROR,
-} from "../lib/constants";
+} from "../../lib/constants";
 import { redirect } from "next/navigation";
-import getSession from "../lib/session";
+import getSession from "../../lib/session";
 
 const checkPasswordConfirm = ({
   password,
