@@ -1,4 +1,5 @@
 import db from "@/app/lib/db";
+import AddTweet from "@/components/tweet/add-tweet";
 import TweetList from "@/components/tweet-list";
 
 async function getFeeds() {
@@ -22,6 +23,7 @@ export default async function Feed() {
 
   return (
     <div className="py-5 flex flex-col gap-8">
+      <AddTweet />
       <TweetList initialTweets={feeds} />
     </div>
   );

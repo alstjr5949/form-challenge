@@ -15,13 +15,23 @@ export default function FormInput({
 }: FormInputProps) {
   return (
     <div className="flex flex-col gap-2 w-full">
-      <input
-        type={type}
-        name={name}
-        placeholder={placeholder}
-        className="w-full p-3 rounded-lg bg-transparent border border-neutral-300 focus:outline-none placeholder:text-neutral-300"
-        required={required}
-      />
+      {type === "textarea" ? (
+        <textarea
+          name={name}
+          placeholder={placeholder}
+          className="w-full p-3 rounded-lg bg-transparent border border-neutral-300 focus:outline-none placeholder:text-neutral-300 resize-none"
+          required={required}
+        />
+      ) : (
+        <input
+          type={type}
+          name={name}
+          placeholder={placeholder}
+          className="w-full p-3 rounded-lg bg-transparent border border-neutral-300 focus:outline-none placeholder:text-neutral-300"
+          required={required}
+        />
+      )}
+
       {errors.map((error, index) => (
         <span key={index} className="text-red-500 text-sm">
           {error}
